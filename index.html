@@ -7,41 +7,51 @@
       content="width=device-width, initial-scale=1.0"
     />
     <link rel="stylesheet" href="styles.css" />
-
     <title>Task One</title>
   </head>
   <body>
     <main>
-      <div>
-        <h1 data-testid="'slackUserName">
-          Slack Name: Catherine Anokwuru
-        </h1>
-        <figure>
-          <img
-            src="slack profile img.jpeg"
-            alt="Catherine Anokwuru"
-            data-testid="slackDisplayImage"
-          />
-          <figcaption>Slack Display Picture</figcaption>
-        </figure>
-      </div>
-      <div>
-        <p data-testid="currentDayOfTheWeek" class="day"></p>
-      </div>
-      <div>
-        <h4 data-testid="currentUTCTime" class="time" onload="showTime()"></h4>
-      </div>
-      <div class="countdown">
-        <h4></h4>
-        <h4></h4>
-        <h4></h4>
-        <h4></h4>
-      </div>
-      <div>
-        <p data-testid="myTrack">My track is <strong>Frontend</strong></p>
+      <div class="grid">
+        <div class="text">
+          <h1 data-testid="'slackUserName">
+            Slack Name: Catherine Anokwuru
+          </h1>
+          <p data-testid="myTrack">
+            My track is <strong>Frontend</strong>
+          </p>
+          <p data-testid="currentDayOfTheWeek" class="day"></p>
+          <p>
+            The current UTC time is
+            <strong
+              data-testid="currentUTCTime"
+              class="time"
+            ></strong>
+          </p>
+          <div class="github">
+            <p>
+              Click
+              <a
+                data-testid="githubURL"
+                href="https://github.com/Catherine-Anokwuru/hng-task-1"
+                target="_blank"
+                >here</a
+              >
+              to access the github repo for this webpage
+            </p>
+          </div>
+        </div>
+        <div class="img">
+          <figure>
+            <img
+              src="slack profile img.jpeg"
+              alt="Catherine Anokwuru"
+              data-testid="slackDisplayImage"
+            />
+            <figcaption>Slack Display Picture</figcaption>
+          </figure>
+        </div>
       </div>
     </main>
   </body>
-    <script src="main.js"></script>
-
+  <script src="main.js"></script>
 </html>

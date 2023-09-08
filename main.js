@@ -17,32 +17,35 @@ let date = new Date();
 const weekday = weekdays[date.getDay()];
 day.innerHTML = `The current day of the week is <strong>${weekday}<strong>`;
 
-function showTime(){
-    var now = new Date();
-    var h = date.getHours(); // 0 - 23
-    var m = date.getMinutes(); // 0 - 59
-    var s = date.getSeconds(); // 0 - 59
-    var session = "AM";
+//Time
+function currentTime() {
+  let date = new Date();
+  let h = date.getUTCHours();
+  let m = date.getUTCMinutes();
+  let s = date.getUTCSeconds();
+  let ms = date.getUTCMilliseconds();
+  let timePeriod = "AM";
 
-    if(h == 0){
-        h = 12;
-    }
+  if (h === 0) {
+    h = 12;
+  }
+  if (h > 12) {
+    h = h - 12;
+    timePeriod = "PM";
+  }
 
-    if(h > 12){
-        h = h - 12;
-        session = "PM";
-    }
+  h = h < 10 ? "0" + h : h;
+  m = m < 10 ? "0" + m : m;
+  s = s < 10 ? "0" + s : s;
+  ms = ms < 100 ? "0" + ms : ms;
+  ms = ms < 10 ? "00" + ms : ms;
 
-    h = (h < 10) ? "0" + h : h;
-    m = (m < 10) ? "0" + m : m;
-    s = (s < 10) ? "0" + s : s;
+  let time = h + ":" + m + ":" + s + ':' + ms + " " + timePeriod;
 
-    var time = h + ":" + m + ":" + s + " " + session;
-    document.querySelector(".time").innerText = time;
-    document.querySelector(".time").textContent = time;
-
-    setTimeout(showTime, 1000);
-
+  document.querySelector(".time").innerText = time;
+  let t = setTimeout(function () {
+    currentTime();
+  }, 10);
 }
 
-showTime();
+currentTime();
