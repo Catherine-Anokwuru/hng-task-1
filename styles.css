@@ -1,19 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
 body {
   background: #fcf8f8;
-  padding-inline: 10%;
 }
+section {
+  width: 100vw;
+  overflow: hidden;
+  /* padding-inline: 10%; */
+  padding-top: 6rem;
+  margin: auto;
+}
+
 .grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 3rem;
   max-width: 90rem;
   min-width: 80%;
-  padding: 6rem 0;
+  width: 100vw;
   margin: auto;
 }
 .text {
   margin: auto;
   text-align: center;
+  width: 90%;
 }
 .text h1 {
   font-family: "Times New Roman", Times, serif;
@@ -27,25 +44,18 @@ body {
   position: relative;
   z-index: 10;
   margin: auto;
+  width: 90%;
 }
-.img ::before {
-  position: absolute;
-  height: 80%;
-  width: 70%;
-  z-index: 3;
-  top: -1rem;
-  left: 5rem;
-  border: solid orange 6px;
-  border-radius: 1rem;
-  content: "";
-}
+
 .img img {
-  width: 80%;
+  width: 100%;
   min-width: 300px;
   height: auto;
   border-radius: 1rem;
   position: relative;
   z-index: 9;
+  object-fit: contain;
+  overflow: hidden;
 }
 .time {
   font-size: 1.5rem;
@@ -67,17 +77,36 @@ figcaption {
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
   }
+  .img img {
+    width: 80%;
+  }
+  .img {
+    width: 80%;
+  }
   .img ::before {
+    position: absolute;
+    height: 80%;
+    width: 70%;
+    z-index: 3;
     top: -2rem;
     left: 6rem;
+    border: solid orange 6px;
+    border-radius: 1rem;
+    content: "";
   }
   .text {
     text-align: justify;
-  }
-  .text h1 {
+    width: 80%;
+    margin: auto;
     white-space: nowrap;
   }
+  .text h1 {
+    width: 80%;
+    margin: auto;
+  }
   .text p {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
+    width: 80%;
+    margin: auto;
   }
 }
