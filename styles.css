@@ -46,21 +46,21 @@ body {
   border-radius: 1rem;
   position: relative;
   z-index: 9;
-
 }
-
-.time{
+.time {
   font-size: 1.5rem;
 }
-.github a{
-color: orange;
-text-decoration: none;
+.github a {
+  color: orange;
+  text-decoration: none;
 }
-figcaption{
-font-style: italic;
-font-weight: bold;
-text-align: center;
+figcaption {
+  font-style: italic;
+  font-weight: bold;
+  text-align: center;
 }
+
+/* Tab and desktop */
 @media screen and (min-width: 1024px) {
   .grid {
     display: grid;
@@ -74,12 +74,10 @@ text-align: center;
   .text {
     text-align: justify;
   }
-.text h1 {
+  .text h1 {
     white-space: nowrap;
-
-}
-.text p {
-  font-size: 1.3rem;
-
-}
+  }
+  .text p {
+    font-size: 1.3rem;
+  }
 }
