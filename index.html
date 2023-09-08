@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Task One</title>
+  </head>
+  <body>
+    <main>
+      <div>
+        <h1 data-testid="'slackUserName">
+          Slack Name: Catherine Anokwuru
+        </h1>
+        <figure>
+          <img
+            src="slack profile img.jpeg"
+            alt="Catherine Anokwuru"
+            data-testid="slackDisplayImage"
+          />
+          <figcaption>Slack Display Picture</figcaption>
+        </figure>
+      </div>
+      <div>
+        <p data-testid="currentDayOfTheWeek" class="day"></p>
+      </div>
+      <div>
+        <h4 data-testid="currentUTCTime" class="time" onload="showTime()"></h4>
+      </div>
+      <div class="countdown">
+        <h4></h4>
+        <h4></h4>
+        <h4></h4>
+        <h4></h4>
+      </div>
+      <div>
+        <p data-testid="myTrack">My track is <strong>Frontend</strong></p>
+      </div>
+    </main>
+  </body>
+    <script src="main.js"></script>
+
+</html>
